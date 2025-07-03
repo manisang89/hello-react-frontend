@@ -5,7 +5,7 @@ function App() {
   const [msg, setMsg] = useState('');
 
   useEffect(() => {
-    axios.get('https://hello-flask-backend.onrender.com')
+    axios.get('https://hello-flask-backend.onrender.com/api/hello')
       .then(res => setMsg(res.data.message))
       .catch(err => console.error(err));
   }, []);
